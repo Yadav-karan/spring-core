@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	
+	<bean id="adrs" class="com.demo.Address">
+		<property name="city" value="Mumbai"></property>
+		<property name="state" value="Maharashtra"></property>
+		<property name="zipCode" value="401209"></property>
+	</bean>
+	
+	<!-- Define the Dependency -->
+	<bean id="emp1" class="com.demo.Employee" init-method="myInit" destroy-method="myDestroy">
+		<property name="eid" value="102"></property>
+		<property name="eName" value="Karan"></property>
+		<!-- <constructor-arg ref="adrs"></constructor-arg> -->
+		<property name="address" ref="adrs"></property>
+	</bean>
+	
+	<!-- 
+	<bean id="emp2" class="com.demo.Employee">
+		<property name="eid" value="103"></property>
+		<property name="eName" value="Jack"></property>
+		<property name="eAddress" value="India"></property>
+	</bean> 
+	 -->
+
+
+</beans>

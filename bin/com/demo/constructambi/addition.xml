@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	
+	<bean id="add" class="com.demo.constructambi.Addition">
+		<constructor-arg value="12" type="double"/>
+		<constructor-arg value="32" type="double"/>
+	</bean>
+
+
+</beans>
